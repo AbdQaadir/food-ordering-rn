@@ -1,14 +1,8 @@
-import { View } from "react-native";
+import { Redirect } from "expo-router";
+import React from "react";
 
-import products from "@/assets/data/products";
-import ProductListItem from "@/src/components/ProductListItem";
-
-export default function TabOneScreen() {
-  return (
-    <View>
-      {products?.map((product) => {
-        return <ProductListItem key={product.id} product={product} />;
-      })}
-    </View>
-  );
+function TabIndex() {
+  return <Redirect href={"/menu/"} />;
 }
+
+export default TabIndex;
